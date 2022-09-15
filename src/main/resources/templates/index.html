@@ -7,8 +7,28 @@
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 </head>
-<body>
+<body class="container">
 <h1>Pick a planet:</h1>
+<!--<div class="container">-->
+<!--    <label>Planets-->
+<!--    <ol>-->
+<!--        <li th:each="planet : ${planets}" th:text="${planet}"></li>-->
+<!--    </ol>-->
+<!--    </label>-->
+<!--</div>-->
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Planet</th>
+        <th>Days per Year</th>
+    </tr>
+    </thead>
+    <tr th:each="planet : ${planets}">
+        <td th:text="${planet.name}"></td>
+        <td th:text="${planet.yearLength}"></td>
+
+    </tr>
+</table>
 
 </body>
 </html>
